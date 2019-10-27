@@ -1,0 +1,8 @@
+#! /usr/bin/python
+
+print("Wprowadz haslo:")
+haslo = input()
+
+gwiazdki = (len(haslo) -2) * "*"
+secret = haslo[0] + gwiazdki + haslo[-1]
+print(secret)
