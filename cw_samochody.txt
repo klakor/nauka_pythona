@@ -1,0 +1,5 @@
+
+indeks: 1: syrena - syrena ma ilosc drzwi 3
+indeks: 2: polonez - polonez ma ilosc drzwi 5
+indeks: 3: fiat - fiat ma ilosc drzwi 5
+indeks: 4: kia - kia ma ilosc drzwi 5
