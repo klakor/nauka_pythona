@@ -14,11 +14,16 @@ podpowiedz = slownik[haslo]
 print("Witaj w grze szubienica. Zgadnij, jakie haslo wylosowal komputer.\nZanim to zrobisz, mozesz 5 razy zapytac, czy wybrana przez Ciebie litera wystepuje w hasle. Uzywaj tylko pojedynczych liter! Do dziela!")
 print("\nHaslo ma " + str(dlugosc) + " znakow: " + dlugosc * "_")
 print("\nPodpowiedz: " + str(podpowiedz))
+print("")
 
 #zgadywanie liter:
 zgadniete = []
 for odpowiedz in range(5):
-    litera = raw_input("Czy w hasle wystepuje litera: ")
+    while True:
+        litera = raw_input("Czy w hasle wystepuje litera: ")
+        if (len(litera) == 1 and not litera.isspace()):
+            break
+
     if litera.lower() not in haslo:
         print("     NIE")
     elif litera.lower() in haslo:
@@ -32,7 +37,7 @@ print(zgadniete)
 print('\n\nSprobuj odgadnac haslo:')
 zgaduj = raw_input()
 
-if zgaduj == prawidlowe_haslo:
+if zgaduj.lower() == prawidlowe_haslo:
     print("\nGratulacje, udalo Ci sie!")
 else:
     print("\nBledne haslo. Prawidlowa odpowiedz to: " + str(prawidlowe_haslo))
